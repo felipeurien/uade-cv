@@ -23,9 +23,17 @@ a {
   color:#C1C4DC;
   font: 700 20px 'Inter', sans-serif; 
   display: flex; /* Make the buttons inside .right flex containers */
-  align-items: center; /* Vertically center the buttons */
+  align-items: center; /* Vertically center */
   padding: 10px 20px;
   border: 2px;
+}
+
+.topnav .left a {
+  color: #C1C4DC;
+  font: 700 20px 'Inter', sans-serif; 
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 10px; 
 }
 
 /* Style the left button */
@@ -33,7 +41,7 @@ a {
   color:#C1C4DC;
   font: 700 20px 'Inter', sans-serif; 
   display: flex; /* Make the buttons inside .right flex containers */
-  align-items: center; /* Vertically center the buttons */
+  align-items: center; /* Vertically center */
   border: 2px;
 }
 
@@ -43,14 +51,16 @@ a {
   font: 700 20px 'Inter', sans-serif; 
   text-decoration: none;
   padding: 10px 20px;
-  margin-left: 10px; /* Add some space between buttons */
+  margin-left: 10px; 
 }
 /* Change the link color on hover */
 .topnav a:hover {
-  border-radius: 5px;
+  background-color: #C1C4DC;
+  color: #0d0e1b;
+  /* border-radius: 5px;
   border-style: solid;
   border-width: 2px;
-  border-color: #C1C4DC;
+  border-color: #C1C4DC; */
 }
 
 
@@ -101,6 +111,7 @@ a {
   position: absolute;
   left: calc(50% - 178px);
  top: 410px;
+ text-align: center;
  }
 
 ._2023 {
@@ -125,4 +136,68 @@ a {
   text-align: center;
   font: 400 24px 'Inter', sans-serif;
   position: relative;
-  } 
+} 
+ 
+.este {
+    border-bottom: #C1C4DC;
+    border-bottom-width: 2px;
+    border: 2px;
+    border-bottom-style: solid;
+}
+  
+/* ////////////////////////// */
+
+
+.icon {
+  display: none;
+  width: 55px;
+  height: 55px;
+}
+
+.mobile_nav {
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  display: none;
+}
+
+.este_mobile{
+  border-color: #d2d6eb;
+  border: 4px;
+  border-bottom-style: solid;
+  padding-bottom: 2px;
+}
+
+@media only screen and (max-width: 930px) {
+
+  .topnav .left, .topnav .right {
+      display: none; /* Hide the left and right sections on mobile screens */
+  }
+
+  .card {
+    width: 392px;
+  }
+
+  .icon{
+    display: block;
+  }
+
+  .mobile_nav{
+    display: flex;
+  }
+
+  .topnav a:hover {
+    background-color: #0d0e1b;
+  }
+
+  a {
+    color: #B9C3FF;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card {
+    width: 350px;
+  }
+}
